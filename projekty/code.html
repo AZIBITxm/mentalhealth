@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#13a4ec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+            },
+            fontFamily: {
+              display: ["Manrope"],
+            },
+            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-primary/20 bg-background-light/80 px-4 py-3 backdrop-blur-sm dark:bg-background-dark/80 md:px-10">
+<div class="flex items-center gap-3 text-slate-800 dark:text-slate-200">
+<div class="h-6 w-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold">Mindful Path</h2>
+</div>
+<div class="flex items-center gap-4">
+<nav class="hidden items-center gap-6 md:flex">
+<a class="text-sm font-medium text-slate-600 transition-colors hover:text-primary dark:text-slate-400 dark:hover:text-primary" href="#">About</a>
+<a class="text-sm font-medium text-slate-600 transition-colors hover:text-primary dark:text-slate-400 dark:hover:text-primary" href="#">Services</a>
+<a class="text-sm font-medium text-slate-600 transition-colors hover:text-primary dark:text-slate-400 dark:hover:text-primary" href="#">Blog</a>
+<a class="text-sm font-medium text-slate-600 transition-colors hover:text-primary dark:text-slate-400 dark:hover:text-primary" href="#">Contact</a>
+</nav>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary px-4 py-2 text-sm font-bold text-white transition-opacity hover:opacity-80">
+<span>Book a Consultation</span>
+</button>
+</div>
+</header>
+<main class="flex flex-1 flex-col items-center py-12 sm:py-16 md:py-20">
+<div class="w-full max-w-6xl px-4 md:px-8">
+<div class="mb-12 text-center">
+<h1 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl md:text-5xl">
+              Projects &amp; Collaborations
+            </h1>
+<p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600 dark:text-slate-400">
+              Explore a selection of initiatives and partnerships that reflect my commitment to mental health and well-being.
+            </p>
+</div>
+<div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+<div class="flex flex-col overflow-hidden rounded-xl bg-white shadow-lg transition-transform duration-300 hover:-translate-y-1 dark:bg-slate-800">
+<div class="aspect-video w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCSowfe78O7ISVGhB6XAXOJmmk_Qb1yl6UfJRdvsZdp_8mTCdYf5uwD0wormHJ-FEhBNsC6wBLffYP_wi2XNJiiOEZSU0Z62RfwvRCD0ZPc1ohUV2l6IYOm3v8jSpdzj0FdhDWsG-qVDLXsRhtEBhUw0GmeIaswWUsmhvlWqKY1aYHYBAzY9wO7I2iVw0J3WWaSu3NjTwhxyVF0T9XftfjeqJNtLCWhdeU-GtLFlvkJbJlRXtvn7vEClUvTVnmmsWNX80-uq_D89G62");'></div>
+<div class="flex flex-1 flex-col p-6">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Community Wellness Program</h3>
+<p class="mt-2 flex-1 text-sm text-slate-600 dark:text-slate-400">
+                  A community-based program offering free mental health resources and workshops to underserved populations.
+                </p>
+</div>
+</div>
+<div class="flex flex-col overflow-hidden rounded-xl bg-white shadow-lg transition-transform duration-300 hover:-translate-y-1 dark:bg-slate-800">
+<div class="aspect-video w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDy2NNWXWMfEQhUNUnFTT4rEL3U1Dwrms8k41r013yDcQzVENIq69v9i9a7bNd-iM_bAVHUAcSzpBTsZPzv6e5_gHEU6pB-wxKZkb4bS9CHK8mvMOif0ya8g2IwbhLRTfMpFp43rUuc0AUWnqofYMR3aEFp7BWrAG__MIzq_8PC0oU6ebrFtX9FFt7Bh5Qxl1OeJQS-ad1HrNiDBg4q_L5vyUnwg9GpNbAqaKuOjq8wsQ8ALqTpzzg08EyuJw6VKUvWf_tb4j-BGSLb");'></div>
+<div class="flex flex-1 flex-col p-6">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Corporate Mental Health Workshops</h3>
+<p class="mt-2 flex-1 text-sm text-slate-600 dark:text-slate-400">
+                  Tailored workshops for businesses to promote employee well-being and create a supportive work environment.
+                </p>
+</div>
+</div>
+<div class="flex flex-col overflow-hidden rounded-xl bg-white shadow-lg transition-transform duration-300 hover:-translate-y-1 dark:bg-slate-800">
+<div class="aspect-video w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBHIMZpUQFEhNrGU72N0ccR9MSJaZ10ourQLq8wdeSOHm9ivDHKgJZGGWiEs_1hz5tWQk52X0_3oZAXe_9xh2xTPlHUTItjflZTgrq-2JKwmEEXTklhUv8i3Zci0_b59N6kO2oTkCoSOIaS0x0DQVqmxwpT-kq6HyuF2GGcorwP_-si9guDBLfWWNabDA07CqDWcdF_vazf8p7xnveFtTfRrhhXby9qq7n6uiyrgcPj1ml8XU1-tWkgf8mxAgW2sbvMQKPlPPEcJDbW");'></div>
+<div class="flex flex-1 flex-col p-6">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Collaborative Research Initiative</h3>
+<p class="mt-2 flex-1 text-sm text-slate-600 dark:text-slate-400">
+                  A joint research project with a leading university to study the impact of mindfulness on stress reduction.
+                </p>
+</div>
+</div>
+<div class="flex flex-col overflow-hidden rounded-xl bg-white shadow-lg transition-transform duration-300 hover:-translate-y-1 dark:bg-slate-800">
+<div class="aspect-video w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAMHs217r0ETqMonhCTeczGCUqUor-m73NV3E1Dqwz8dIBPhYazikbdbpj7mNtUcgNWEo6g6ScE_zsW0WC8wd48ZXqtHajewz0alIrU177G3HCjKtI4fZSMF2ONYvKIxv1PP1Xxm3AcphmECIfTfDUhyezwUdt_7PatV8uYcnK1W_-0B7Q5ZRaHH0-5zNgIV575VHM9vjyKd6pOwaWmQ8j4j8Q4C-47oQRpfgMYPDQdWsShZEoxI38_yhm2_X07jQsJ2j89mBPoCAUI");'></div>
+<div class="flex flex-1 flex-col p-6">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Mental Health Awareness Campaign</h3>
+<p class="mt-2 flex-1 text-sm text-slate-600 dark:text-slate-400">
+                  An annual campaign to raise awareness about mental health issues and reduce stigma through various events and media outreach.
+                </p>
+</div>
+</div>
+<div class="flex flex-col overflow-hidden rounded-xl bg-white shadow-lg transition-transform duration-300 hover:-translate-y-1 dark:bg-slate-800">
+<div class="aspect-video w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkeOOMms2IL6w1F7oLmt6b9JPlYcz3oB2vv9RAwsdDrAMj6arI7_CxW5u59xHyT6NitvyjCctDx1oaKTtMyusQkkmoKpyZq6-HnnXhNfQ8k_wrR4FcJJMSwsjHvNXo4rVy3EsyfQpSNPihEhgQNtLch8CPZKNv0sYJfmGybrWBK9JuTAuwPyakAJNVl1sCuKbCV8rX3NjySABnvjXbQ0a-2uyIx9pFGvmSXcA4E5MDv9g88GFEct4SBrNIOiIGPPP_1x2PvB9Cw9Ta");'></div>
+<div class="flex flex-1 flex-col p-6">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">School-Based Counseling Services</h3>
+<p class="mt-2 flex-1 text-sm text-slate-600 dark:text-slate-400">
+                  Providing counseling services and support programs in schools to help students cope with academic and personal challenges.
+                </p>
+</div>
+</div>
+<div class="flex flex-col overflow-hidden rounded-xl bg-white shadow-lg transition-transform duration-300 hover:-translate-y-1 dark:bg-slate-800">
+<div class="aspect-video w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCBNCUsPiakSaR0r6Ohr2n0EjzMS0JTPMBO_qQjXUXujLEEfSa1X5lmdiX8Kyc_VF71UiiFB3AXAvzG_jg-Cz89I5GQC_641NC3FSfeAH0WZLuUvZuz-iBpkRanzFfzUq0maCwOxoWcxgtWs1E8v1fMNYgdM97gO0TFdhNJ9VnayAoBhLc5qBYtumtyj9-6HDCo8oFjt3cHol_1I3zt-MxOWmrJer8e5LtYPdpMTB0Lt-OgrXHwUWIwZCf5o22GxQt1B6T0NQxzYSi3");'></div>
+<div class="flex flex-1 flex-col p-6">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Online Support Group Facilitation</h3>
+<p class="mt-2 flex-1 text-sm text-slate-600 dark:text-slate-400">
+                  Facilitating online support groups for individuals dealing with specific mental health concerns, fostering a sense of community and shared experience.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="w-full bg-background-light dark:bg-background-dark">
+<div class="mx-auto max-w-6xl border-t border-primary/20 px-4 py-8 md:px-8">
+<div class="flex flex-col items-center justify-between gap-4 text-center sm:flex-row">
+<p class="text-sm text-slate-600 dark:text-slate-400">© 2024 Mindful Path. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<a class="text-sm text-slate-600 transition-colors hover:text-primary dark:text-slate-400 dark:hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-sm text-slate-600 transition-colors hover:text-primary dark:text-slate-400 dark:hover:text-primary" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>
