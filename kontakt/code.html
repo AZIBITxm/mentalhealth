@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontakt - Anna Zychowicz</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+  <body style="background-color: #f6f7f8;" class="font-display text-slate-200">
+  <div id="menu-container"></div>
+  <main class="flex-1">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="max-w-2xl mx-auto bg-background-light dark:bg-background-dark rounded-xl shadow-md p-8">
+  <h1 class="text-4xl font-extrabold mb-6 text-primary">Kontakt – Anna Zychowicz</h1>
+        <p class="mb-4 text-lg text-slate-700 dark:text-slate-300">Masz pytania lub chcesz umówić wizytę? Skontaktuj się ze mną:</p>
+        <ul class="mb-8 space-y-2">
+          <li><span class="font-bold">Telefon:</span> <a href="tel:+48123456789" class="text-primary hover:underline">+48 123 456 789</a></li>
+          <li><span class="font-bold">E-mail:</span> <a href="mailto:kontakt@amelia-carter.pl" class="text-primary hover:underline">kontakt@amelia-carter.pl</a></li>
+          <li><span class="font-bold">Adres gabinetu:</span> ul. Przykładowa 1, 00-000 Warszawa</li>
+        </ul>
+        <form class="space-y-4">
+          <div>
+            <label for="name" class="block text-sm font-medium">Imię i nazwisko</label>
+            <input type="text" id="name" name="name" class="form-input w-full rounded-lg border-slate-300 bg-background-light p-3 text-base text-slate-800 placeholder-slate-400 focus:border-primary focus:ring-primary dark:border-slate-700 dark:bg-background-dark dark:text-slate-200 dark:focus:border-primary" placeholder="Twoje imię i nazwisko"/>
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium">E-mail</label>
+            <input type="email" id="email" name="email" class="form-input w-full rounded-lg border-slate-300 bg-background-light p-3 text-base text-slate-800 placeholder-slate-400 focus:border-primary focus:ring-primary dark:border-slate-700 dark:bg-background-dark dark:text-slate-200 dark:focus:border-primary" placeholder="Twój e-mail"/>
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium">Wiadomość</label>
+            <textarea id="message" name="message" rows="5" class="form-textarea w-full rounded-lg border-slate-300 bg-background-light p-3 text-base text-slate-800 placeholder-slate-400 focus:border-primary focus:ring-primary dark:border-slate-700 dark:bg-background-dark dark:text-slate-200 dark:focus:border-primary" placeholder="Treść wiadomości"></textarea>
+          </div>
+          <button type="submit" class="flex items-center justify-center rounded-lg bg-black px-5 py-3 text-base font-bold text-white shadow-md transition-transform hover:scale-105 active:scale-100">Wyślij</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script src="/menu-loader.js"></script>
+</body>
+</html>
