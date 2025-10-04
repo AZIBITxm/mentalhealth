@@ -2,10 +2,30 @@
 window.addEventListener('DOMContentLoaded', function() {
   var menuContainer = document.getElementById('menu-container');
   if (menuContainer) {
-    fetch('/menu.html')
-      .then(response => response.text())
+    // Określ ścieżkę do menu.html w zależności od lokalizacji strony
+    const currentPath = window.location.pathname;
+    const isInSubfolder = currentPath.includes('/') && currentPath.split('/').filter(p => p).length > 1;
+    const menuPath = isInSubfolder ? '../menu.html' : 'menu.html';
+    
+    fetch(menuPath)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Menu file not found');
+        }
+        return response.text();
+      })
       .then(html => {
         menuContainer.innerHTML = html;
+        
+        // Popraw ścieżki w linkach menu w zależności od lokalizacji
+        const basePrefix = isInSubfolder ? '../' : '';
+        const menuLinks = menuContainer.querySelectorAll('a[href^="/"]');
+        menuLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          // Usuń początkowy / i dodaj odpowiedni prefix
+          const newHref = basePrefix + href.substring(1);
+          link.setAttribute('href', newHref);
+        });
 
         // Obsługa menu mobilnego
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
