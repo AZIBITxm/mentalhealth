@@ -11,6 +11,7 @@ window.addEventListener('DOMContentLoaded', function() {
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
         const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
         
         // Funkcja otwierania menu
         function openMobileMenu() {
@@ -18,20 +19,44 @@ window.addEventListener('DOMContentLoaded', function() {
             mobileMenuOverlay.classList.remove('hidden');
             // Trigger reflow for animation
             mobileMenuOverlay.offsetHeight;
-            mobileMenuOverlay.classList.remove('opacity-0');
-            mobileMenuOverlay.classList.add('opacity-100');
+            mobileMenuOverlay.classList.remove('translate-x-full');
+            mobileMenuOverlay.classList.add('translate-x-0');
             document.body.style.overflow = 'hidden';
+            
+            // Animacja hamburgera na X
+            if (hamburgerIcon) {
+              hamburgerIcon.classList.add('hamburger-to-x');
+            }
+            
+            // Animacja elementów menu
+            setTimeout(() => {
+              const menuItems = mobileMenuOverlay.querySelectorAll('.menu-item');
+              menuItems.forEach(item => {
+                item.classList.add('animate');
+              });
+            }, 200);
           }
         }
         
         // Funkcja zamykania menu
         function closeMobileMenu() {
           if (mobileMenuOverlay) {
-            mobileMenuOverlay.classList.remove('opacity-100');
-            mobileMenuOverlay.classList.add('opacity-0');
+            // Usuń animację z elementów menu
+            const menuItems = mobileMenuOverlay.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+              item.classList.remove('animate');
+            });
+            
+            // Animacja hamburgera z powrotem
+            if (hamburgerIcon) {
+              hamburgerIcon.classList.remove('hamburger-to-x');
+            }
+            
+            mobileMenuOverlay.classList.remove('translate-x-0');
+            mobileMenuOverlay.classList.add('translate-x-full');
             setTimeout(() => {
               mobileMenuOverlay.classList.add('hidden');
-            }, 300);
+            }, 500);
             document.body.style.overflow = '';
           }
         }

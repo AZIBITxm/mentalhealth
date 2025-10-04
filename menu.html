@@ -15,10 +15,12 @@
     <h2 class="text-xl font-bold">Anna Zychowicz</h2>
   </div>
   <div class="flex items-center gap-6">
-    <!-- Hamburger button -->
-    <button id="mobile-menu-btn" class="md:hidden p-2 text-primary hover:bg-gray-100 rounded-lg transition-colors" aria-label="Menu">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+    <!-- Hamburger button with animation -->
+    <button id="mobile-menu-btn" class="md:hidden p-2 text-primary hover:bg-gray-100 rounded-lg transition-all duration-300" aria-label="Menu">
+      <svg id="hamburger-icon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path id="line-1" class="transition-all duration-300 origin-center" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16"></path>
+        <path id="line-2" class="transition-all duration-300" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
+        <path id="line-3" class="transition-all duration-300 origin-center" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h16"></path>
       </svg>
     </button>
     <!-- Desktop menu -->
@@ -35,7 +37,7 @@
 </header>
 
 <!-- Mobile menu overlay -->
-<div id="mobile-menu-overlay" class="fixed inset-0 bg-white z-[9999] hidden opacity-0 transition-opacity duration-300">
+<div id="mobile-menu-overlay" class="fixed inset-0 bg-white z-[9999] hidden transition-all duration-500 ease-in-out transform translate-x-full">
   <div class="flex flex-col h-full">
     <!-- Mobile menu header -->
     <div class="flex items-center justify-between p-6 border-b border-gray-200">
@@ -48,14 +50,62 @@
     </div>
     <!-- Mobile menu content -->
     <nav class="flex-1 flex flex-col items-center justify-center gap-6 p-6">
-      <a class="text-2xl font-medium text-gray-800 hover:text-primary transition-colors" href="/index.html">Strona główna</a>
-      <a class="text-2xl font-medium text-gray-800 hover:text-primary transition-colors" href="/o_mnie/code.html">O mnie</a>
-      <a class="text-2xl font-medium text-gray-800 hover:text-primary transition-colors" href="/projekty/code.html">Projekty</a>
-      <a class="text-2xl font-medium text-gray-800 hover:text-primary transition-colors" href="/książki_i_publikacje/code.html">Książki i publikacje</a>
-      <a class="text-2xl font-medium text-gray-800 hover:text-primary transition-colors" href="/spotkania_z_klientami/code.html">Spotkania z klientami</a>
-      <a class="text-2xl font-medium text-gray-800 hover:text-primary transition-colors" href="/terminy_i_rezerwacja/code.html">Terminy i rezerwacja</a>
-      <a class="text-2xl font-medium text-gray-800 hover:text-primary transition-colors" href="/kontakt/code.html">Kontakt</a>
-      <a href="/terminy_i_rezerwacja/code.html" class="mt-8 px-8 py-4 bg-primary text-white text-lg font-bold rounded-lg shadow-lg hover:shadow-xl transition-all hover:scale-105">Umów wizytę</a>
+      <a class="text-2xl font-medium text-gray-800 hover:text-primary transition-all duration-300 transform hover:scale-110 opacity-0 menu-item" style="animation-delay: 0.1s" href="/index.html">Strona główna</a>
+      <a class="text-2xl font-medium text-gray-800 hover:text-primary transition-all duration-300 transform hover:scale-110 opacity-0 menu-item" style="animation-delay: 0.15s" href="/o_mnie/code.html">O mnie</a>
+      <a class="text-2xl font-medium text-gray-800 hover:text-primary transition-all duration-300 transform hover:scale-110 opacity-0 menu-item" style="animation-delay: 0.2s" href="/projekty/code.html">Projekty</a>
+      <a class="text-2xl font-medium text-gray-800 hover:text-primary transition-all duration-300 transform hover:scale-110 opacity-0 menu-item" style="animation-delay: 0.25s" href="/książki_i_publikacje/code.html">Książki i publikacje</a>
+      <a class="text-2xl font-medium text-gray-800 hover:text-primary transition-all duration-300 transform hover:scale-110 opacity-0 menu-item" style="animation-delay: 0.3s" href="/spotkania_z_klientami/code.html">Spotkania z klientami</a>
+      <a class="text-2xl font-medium text-gray-800 hover:text-primary transition-all duration-300 transform hover:scale-110 opacity-0 menu-item" style="animation-delay: 0.35s" href="/terminy_i_rezerwacja/code.html">Terminy i rezerwacja</a>
+      <a class="text-2xl font-medium text-gray-800 hover:text-primary transition-all duration-300 transform hover:scale-110 opacity-0 menu-item" style="animation-delay: 0.4s" href="/kontakt/code.html">Kontakt</a>
+      <a href="/terminy_i_rezerwacja/code.html" class="mt-8 px-8 py-4 bg-primary text-white text-lg font-bold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 opacity-0 menu-item" style="animation-delay: 0.5s">Umów wizytę</a>
     </nav>
   </div>
 </div>
+
+<style>
+  @keyframes slideInFromRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideOutToRight {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .menu-item.animate {
+    animation: fadeInUp 0.5s ease-out forwards;
+  }
+  
+  .hamburger-to-x #line-1 {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+  }
+  
+  .hamburger-to-x #line-2 {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  
+  .hamburger-to-x #line-3 {
+    transform: rotate(-45deg) translateY(-6px) translateX(6px);
+  }
+</style>
