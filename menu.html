@@ -12,20 +12,50 @@
         </defs>
       </svg>
     </div>
-  <h2 class="text-xl font-bold">Anna Zychowicz</h2>
+    <h2 class="text-xl font-bold">Anna Zychowicz</h2>
   </div>
   <div class="flex items-center gap-6">
-    <nav class="hidden items-center gap-6 md:flex">
+    <!-- Hamburger button -->
+    <button id="mobile-menu-btn" class="md:hidden p-2 text-primary hover:bg-gray-100 rounded-lg transition-colors" aria-label="Menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+    <!-- Desktop menu -->
+    <nav class="hidden md:flex items-center gap-6">
       <a class="text-sm font-medium hover:text-primary transition-colors" href="/o_mnie/code.html">O mnie</a>
       <a class="text-sm font-medium hover:text-primary transition-colors" href="/projekty/code.html">Projekty</a>
       <a class="text-sm font-medium hover:text-primary transition-colors" href="/książki_i_publikacje/code.html">Książki i publikacje</a>
       <a class="text-sm font-medium hover:text-primary transition-colors" href="/spotkania_z_klientami/code.html">Spotkania z klientami</a>
       <a class="text-sm font-medium hover:text-primary transition-colors" href="/terminy_i_rezerwacja/code.html">Terminy i rezerwacja</a>
-  <a class="text-sm font-medium hover:text-primary transition-colors" href="/kontakt/code.html">Kontakt</a>
+      <a class="text-sm font-medium hover:text-primary transition-colors" href="/kontakt/code.html">Kontakt</a>
       <a class="text-sm font-medium hover:text-primary transition-colors" href="/index.html">Strona główna</a>
     </nav>
-    <a href="/terminy_i_rezerwacja/code.html" class="flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-bold text-white shadow-sm transition-transform hover:scale-105 active:scale-100">
-      <span>Umów wizytę</span>
-    </a>
   </div>
 </header>
+
+<!-- Mobile menu overlay -->
+<div id="mobile-menu-overlay" class="fixed inset-0 bg-white z-[9999] hidden opacity-0 transition-opacity duration-300">
+  <div class="flex flex-col h-full">
+    <!-- Mobile menu header -->
+    <div class="flex items-center justify-between p-6 border-b border-gray-200">
+      <h2 class="text-xl font-bold text-primary">Menu</h2>
+      <button id="mobile-menu-close" class="p-2 text-gray-600 hover:text-primary hover:bg-gray-100 rounded-lg transition-colors" aria-label="Zamknij menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile menu content -->
+    <nav class="flex-1 flex flex-col items-center justify-center gap-6 p-6">
+      <a class="text-2xl font-medium text-gray-800 hover:text-primary transition-colors" href="/index.html">Strona główna</a>
+      <a class="text-2xl font-medium text-gray-800 hover:text-primary transition-colors" href="/o_mnie/code.html">O mnie</a>
+      <a class="text-2xl font-medium text-gray-800 hover:text-primary transition-colors" href="/projekty/code.html">Projekty</a>
+      <a class="text-2xl font-medium text-gray-800 hover:text-primary transition-colors" href="/książki_i_publikacje/code.html">Książki i publikacje</a>
+      <a class="text-2xl font-medium text-gray-800 hover:text-primary transition-colors" href="/spotkania_z_klientami/code.html">Spotkania z klientami</a>
+      <a class="text-2xl font-medium text-gray-800 hover:text-primary transition-colors" href="/terminy_i_rezerwacja/code.html">Terminy i rezerwacja</a>
+      <a class="text-2xl font-medium text-gray-800 hover:text-primary transition-colors" href="/kontakt/code.html">Kontakt</a>
+      <a href="/terminy_i_rezerwacja/code.html" class="mt-8 px-8 py-4 bg-primary text-white text-lg font-bold rounded-lg shadow-lg hover:shadow-xl transition-all hover:scale-105">Umów wizytę</a>
+    </nav>
+  </div>
+</div>
